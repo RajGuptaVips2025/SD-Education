@@ -1,0 +1,10 @@
+.typed-text {
+    display: inline-block; /* Ensure the container does not stretch */
+    font-family: monospace; /* Use a monospaced font for better alignment */
+  }
+  
+  .typed-cursor {
+    display: inline; /* Make sure the cursor is inline with the text */
+    font-family: monospace; /* Match font family with the text */
+  }
+  
