@@ -7,7 +7,7 @@ const TypedText = () => {
 
   useEffect(() => {
     const options = {
-      strings: ['HTML pussy chut lauda', 'CSS cadcbhdvas', 'Javascript hjhvhjbjbajsbn'],
+      strings: ['HTML', 'CSS ', 'Javascript '],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
