@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import './TypedText.css'; // Make sure to import the CSS file
+import './TypedText.css';
 
-const TypedText = () => {
+const TypedText = (props) => {
   const el = useRef(null);
 
   useEffect(() => {
     const options = {
-      strings: ['HTML pussy chut lauda', 'CSS cadcbhdvas', 'Javascript hjhvhjbjbajsbn'],
+      strings: props.texts,
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
