@@ -1,6 +1,33 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
 
 export default function Signup() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        navigate("/login");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
+  };
+
   return (
     <>
       {/* component */}
@@ -18,12 +45,16 @@ export default function Signup() {
               type="text"
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
             />
             <input
               type="password"
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
             />
             <input
@@ -34,6 +65,7 @@ export default function Signup() {
             />
             <button
               type="submit"
+              onClick={onSubmit}
               className="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-700 focus:outline-none my-1"
             >
               Create Account
