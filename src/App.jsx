@@ -6,6 +6,8 @@ import Footer from './components/Footer/Footer';
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
+import SideBar from './components/SideBar/SideBar';
+import InfiniteMovingCardsDemo from './components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo';
 
 const App = () => {
   return (
@@ -18,7 +20,10 @@ const App = () => {
               <Navbar />
               <Hero />
               <Card />
+              <InfiniteMovingCardsDemo/>
+              {/* <SideBar/> */}
               <Footer />
+
             </>
           }
         />
