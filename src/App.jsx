@@ -36,6 +36,8 @@ const App = () => {
   // Show loading state while determining authentication
   if (isAuth === null) return <div>Loading...</div>;
 
+
+
   return (
     <>
       <Routes>
@@ -69,3 +71,4 @@ const App = () => {
 };
 
 export default App;
+

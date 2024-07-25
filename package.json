@@ -15,6 +15,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tabler/icons-react": "^3.11.0",
     "clsx": "^2.1.1",
     "firebase": "^10.12.4",
     "framer-motion": "^11.3.16",
@@ -23,6 +24,7 @@
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.25.1",
     "react-simple-typewriter": "^5.0.1",
+    "react-tooltip": "^5.27.1",
     "tailwind-merge": "^2.4.0",
     "typed.js": "^2.1.0"
   },
