@@ -1,19 +1,10 @@
 import React from 'react';
 import LogoWhite from '../../assets/LogoWhite.png'
+import arr from '../../utils/Svgs';
+// import { svgs } from '../../utils/Svgs';
+
 const Footer = () => {
-  const arr = [{
-    head: "Subject",
-    items: [{ content: "Marketing", link: "#" }, { content: "Analytics", link: "#" }, { content: "Commerce", link: "#" }, { content: "Insight", link: "#" }]
-  }, {
-    head: "Support",
-    items: [{ content: "Pricing", link: "#" }, { content: "Documentation", link: "#" }, { content: "Guides", link: "#" }, { content: "API Status", link: "#" }]
-  }, {
-    head: "Company",
-    items: [{ content: "About", link: "#" }, { content: "Blog", link: "#" }, { content: "Jobs", link: "#" }, { content: "Press", link: "#" }, { content: "Partners", link: "#" }]
-  }, {
-    head: "Legal",
-    items: [{ content: "Claim", link: "#" }, { content: "Privacy", link: "#" }, { content: "Terms", link: "#" }]
-  }]
+
   return (
     <>
       <footer className="bg-gray-900 pt-28 pb-8 text-gray-400 py-10">
@@ -50,8 +41,15 @@ const Footer = () => {
                     className="bg-gray-800 border border-gray-700 rounded px-3 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter your email"
                   />
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    Subscribe
+                  <button>
+                    <a href="#" class="relative inline-block text-lg group">
+                      <span class="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                        <span class="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
+                        <span class="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                        <span class="relative text-sm sm:text-base">Subscribe</span>
+                      </span>
+                      <span class="absolute bottom-0 right-0 w-full h-8 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"></span>
+                    </a>
                   </button>
                 </div>
               </div>

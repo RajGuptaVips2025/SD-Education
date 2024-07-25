@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
@@ -13,6 +14,8 @@ import BlogList from "./components/Blogs/BlogList";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import React, { useState, useEffect } from "react";
+
+import Html from './components/HTMLContent/Html';
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(null);
@@ -47,8 +50,11 @@ const App = () => {
             <>
               <Navbar isAuth={isAuth} setIsAuth={setIsAuth} />
               <Hero />
+              {/* <Html/> */}
+              {/* <Hero /> */}
               <Card />
-              <InfiniteMovingCardsDemo />
+              <InfiniteMovingCardsDemo /> 
+              {/* <SideBar/> */}
               <Footer />
             </>
           }
