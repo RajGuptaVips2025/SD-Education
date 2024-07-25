@@ -58,7 +58,7 @@ export default function Signup() {
           <div className="text-grey-dark mt-6">
             Already have an account?
             <a
-              className="no-underline border-b border-blue text-blue"
+              className="no-underline border-b border-blue text-blue-800 font-medium"
               href="../login/"
             >
               Log in
