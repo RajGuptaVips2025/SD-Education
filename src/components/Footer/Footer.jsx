@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="mb-6 md:mr-10">
+              <div className="md:mr-10 ml-40 mb-20">
                 <h5 className="text-white uppercase font-bold mb-4">
                   Subscribe to our newsletter
                 </h5>
@@ -147,10 +147,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* <hr className="border-gray-700 my-6" /> */}
-          {/* <p className="text-center text-gray-400">
-          © 2020 Your Company, Inc. All rights reserved.
-        </p> */}
           <div className="border-t border-gray-700 mt-8 pt-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <img className="h-auto max-w-48 " src={LogoWhite} alt="logo" />
