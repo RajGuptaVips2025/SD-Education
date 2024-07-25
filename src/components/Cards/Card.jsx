@@ -67,6 +67,7 @@ const Card = () => {
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
     ];
+
     return (
         <>
             <div className='pt-16 bg-gradient-to-b from-[#e3e1e105] to-[#5e626c]'>
@@ -84,9 +85,14 @@ const Card = () => {
                                 <p className="text-base text-gray-500">
                                     {item.content}
                                 </p>
-                                <div className="flex justify-center">
-                                    <a href="#" className="text-center hover:text-gray-800 duration-500 bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4">
-                                        Explore
+                                <div className="flex justify-center mt-2">
+                                    <a href="#" class="relative inline-block text-lg group">
+                                        <span class="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                                            <span class="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
+                                            <span class="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                                            <span class="relative text-sm sm:text-base">Explore</span>
+                                        </span>
+                                        <span class="absolute bottom-0 right-0 w-full h-8 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"></span>
                                     </a>
                                 </div>
                             </div>
@@ -99,8 +105,3 @@ const Card = () => {
 };
 
 export default Card;
-// bg-gradient-to-b from-[#131313c5] to-gray-100
-
-
-// 
-// #111827

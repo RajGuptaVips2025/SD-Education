@@ -8,7 +8,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import SideBar from './components/SideBar/SideBar';
 import InfiniteMovingCardsDemo from './components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo';
-import SidebarDemo from './components/SidebarDemo/SidebarDemo';
+import Html from './components/HTMLContent/Html';
 
 const App = () => {
 
@@ -20,9 +20,11 @@ const App = () => {
           element={
             <>
               <Navbar />
-              <Hero />
+              {/* <Html/> */}
+              {/* <Hero />
               <Card />
-              <InfiniteMovingCardsDemo />
+              <InfiniteMovingCardsDemo /> */}
+              {/* <SideBar/> */}
               <Footer />
             </>
           }
@@ -36,9 +38,3 @@ const App = () => {
 
 export default App;
 
-{/* <div className="flex">
-<SideBar />
-</div> */}
-{/* <div className='bg-gradient-to-b from-[#5e626c] to-[#111827] pt-48'>
-  <SidebarDemo />
-</div> */}
