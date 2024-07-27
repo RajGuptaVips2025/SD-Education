@@ -14,18 +14,18 @@ const App = () => {
 
   return (
     <>
+        <Navbar />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Navbar />
-              {/* <Html/> */}
-              {/* <Hero />
+                <Hero />
               <Card />
-              <InfiniteMovingCardsDemo /> */}
+              <InfiniteMovingCardsDemo />  
               {/* <SideBar/> */}
               <Footer />
+              <Html/>
             </>
           }
         />
