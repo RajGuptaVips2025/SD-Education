@@ -1,40 +1,15 @@
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Card from './components/Cards/Card';
-import Footer from './components/Footer/Footer';
-import { Routes, Route } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Signup from './components/Signup/Signup';
-import SideBar from './components/SideBar/SideBar';
-import InfiniteMovingCardsDemo from './components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo';
-import Html from './components/HTMLContent/Html';
-
-const App = () => {
-
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import { Outlet } from 'react-router-dom'
+function App() {
   return (
     <>
-        <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-                <Hero />
-              <Card />
-              <InfiniteMovingCardsDemo />  
-              {/* <SideBar/> */}
-              <Footer />
-              <Html/>
-            </>
-          }
-        />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      <Navbar/>
+      <Outlet/>
+      <Footer/>
     </>
-  );
-};
+  )
+}
 
-export default App;
-
+export default App

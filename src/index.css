@@ -15,4 +15,31 @@ body{
   font-family: "Poppins", "Roboto" sans-serif;
   font-weight: 350;
   font-style: normal;
+  overflow-x: hidden;
+}
+
+.banner {
+  background-image: url('./assets/herobg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3838; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555353; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle when hovered */
 }

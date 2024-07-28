@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoWhite from '../../assets/LogoWhite.png'
-import { svgArray } from '../../assets';
-import { arr } from '../../assets';
+import { svgArray } from '.';
+import { arr } from '.';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="bg-gray-900 pt-28 pb-8 text-gray-400 py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-16">
           <div className="flex flex-col gap-10 sm:flex-col md:flex-col lg:flex-row items-center justify-between">
-            <div className="flex gap-16 md:gap-12 justify-center flex-row flex-wrap mb-6">
+            <div data-aos="fade-right" className="flex gap-16 md:gap-12 justify-center flex-row flex-wrap mb-6">
               {arr.map((col, index) => (
                 <div key={index} className="mb-6 md:mr-16 w-1/3 md:w-1/12">
                   <h5 className="text-white uppercase font-bold mb-4">{col.head}</h5>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col md:flex-col lg:flex-row items-center ml-5 justify-between w-full sm:w-auto">
+            <div  data-aos="fade-left" className="flex flex-col md:flex-col lg:flex-row items-center ml-5 justify-between w-full sm:w-auto">
               <div className="mb-6 md:mr-10 w-full sm:w-auto">
                 <h5 className="text-white uppercase font-bold mb-4">
                   Subscribe to our newsletter

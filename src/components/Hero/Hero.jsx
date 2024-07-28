@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { IoIosPlay } from 'react-icons/io';
-import Typed from 'typed.js';
 import TypedText from '../TypedText/TypedText';
 
 function Hero() {

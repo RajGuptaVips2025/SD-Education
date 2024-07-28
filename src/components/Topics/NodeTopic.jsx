@@ -1,16 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../../App'; // Make sure to import the stylesheet containing the no-scrollbar class
+import '../../App';
 import contentjs from '../../assets/contentjs.jpg'
-import jsTopics from '../../utils/jsTopics';
-import cssTopics from '../../utils/cssTopics';
-import reactTopics from '../../utils/reactTopics';
-import nextjsTopics from '../../utils/nextjsTopics';
 import nodejsTopics from '../../utils/nodejsTopics';
-import expressTopics from '../../utils/expressTopics';
-import mongodbTopics from '../../utils/mongodbTopics';
 
-
-function ContentBox() {
+function NodeTopic() {
 
     const [code, setCode] = useState(`
         <!DOCTYPE html>
@@ -43,7 +36,7 @@ function ContentBox() {
                             <img src={contentjs} className='mx-auto object-contain rounded-xl' alt="" srcset="" />
                         </div>
                         {
-                            jsTopics.map((points, index) => (<div key={index}>
+                            nodejsTopics.map((points, index) => (<div key={index}>
                                 {
                                     index === 0 ?
                                         <div className='py-1 my-24'>
@@ -59,7 +52,7 @@ function ContentBox() {
                                         </div> : ""
                                 }
                                 {points.Topics.map((po, index) => (
-                                    <div key={index}>
+                                    <div key={index} id={po.heading}>
                                         <div className='mt-36 mb-8' >
                                             <p className='text-4xl underline underline-offset-[15px]'>{` ${po.heading}`} </p>
                                         </div>
@@ -76,8 +69,25 @@ function ContentBox() {
                                                             <li key={index} className='text-lg tracking-tight my-4'>{`${liItem}`}</li>
                                                         ))
                                                     }
+
                                                 </ul>
+
                                             </div>
+                                            {po.Example && <div className='mt-2 w-[80%] bg-[#182c3c] rounded-md p-3'>
+                                                <ul className='list-disc px-3 '>
+                                                    <span className='text-2xl'>Examples:</span><br />
+                                                    {
+                                                        po.Example.map((examples, index) => (
+
+                                                            <li key={index} className='text-lg tracking-tight my-4'>{`${examples}`}</li>
+                                                        ))
+                                                    }
+
+                                                </ul>
+
+                                            </div>}
+
+
                                         </div>
                                         {po.compilerContent &&
                                             <div className=' bg-[#002C3C] w-[50vw] p-5 rounded-xl mt-8'>
@@ -118,4 +128,4 @@ function ContentBox() {
     );
 }
 
-export default ContentBox;
+export default NodeTopic;
