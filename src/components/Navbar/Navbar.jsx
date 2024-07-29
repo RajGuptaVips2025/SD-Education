@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../../assets/Logo.png";
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
 
@@ -11,7 +13,7 @@ function Navbar() {
     linkAddress:"/css"
   },
     {linkName:"Javascript",
-    linkAddress:"/jsvascript"
+    linkAddress:"/javascript"
   },
     {linkName:"Tailwind",
     linkAddress:"/tailwind"
@@ -27,6 +29,9 @@ function Navbar() {
   },
     {linkName:"Node Js",
     linkAddress:"/node"
+  },
+    {linkName:"Express",
+    linkAddress:"/express"
   },
 ]
 
@@ -85,44 +90,32 @@ function Navbar() {
       }}
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-10">
-        <a href="/">
+        <Link to="/">
           <img
             className="h-12 w-52 sm:w-32 md:w-40 lg:w-48 xl:w-52 object-contain"
             src={Logo}
             alt="Logo"
           />
-        </a>
+        </Link>
 
         <nav className="hidden md:flex flex-grow justify-center items-center text-white">
           <ul className="flex space-x-8 list-none p-0 m-0">
             <li>
-              <a
-                href="#home"
+              <Link to="/"
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 Home
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#about"
+              <Link to="#about"
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 About
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="#courses"
-                className="text-lg text-gray-800 group transition duration-300"
-              >
-                Courses
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
-            </li>
-            {/* Dropdown Menu */}
             <li className="relative">
               <button
                 id="dropdown-button"
@@ -149,18 +142,17 @@ function Navbar() {
                 <ul
                   id="dropdown-menu"
                   className={`absolute  overflow-hidden right-0 mt-2 w-48 rounded-md shadow-lg bg-[#e9eff7] ring-1 ring-black ring-opacity-5 focus:outline-none ${ isScrolled
-                    ? "bg-slate-100 bg-opacity-20 rounded-b-[16px] border-x-[1px] border-b-[1px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border-white border-opacity-32"
-                    : ""} `}
+                    && "bg-slate-100 bg-opacity-20 rounded-b-[16px] border-x-[1px] border-b-[1px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border-white border-opacity-32"
+                    } `}
                 >
                   {links.map((item,index)=>(
 
                     <li key={index}>
-                    <a
-                      href={item.linkAddress}
+                    <Link to={item.linkAddress}
                       className="block px-4 py-2 text-gray-800 text-center text-sm hover:bg-[#ced7f377]  hover:scale-125 font-semibold duration-100 overflow-hidden "
                       >
                       {item.linkName}
-                    </a>
+                    </Link>
                   </li>
                     ))}
                   
@@ -168,35 +160,34 @@ function Navbar() {
               )}
             </li>
             <li>
-              <a
-                href="#contact"
+              <Link to="#contact"
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 Contact
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="/login" className="relative inline-block text-lg group">
+          <Link to="/login" className="relative inline-block text-lg group">
             <span className="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
               <span className="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
               <span className="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
               <span className="relative text-sm sm:text-base">Login</span>
             </span>
             <span className="absolute bottom-0 right-0 w-full h-8 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"></span>
-          </a>
+          </Link>
 
-          <a href="/signup" className="relative inline-block text-lg group">
+          <Link to="/signup" className="relative inline-block text-lg group">
             <span className="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
               <span className="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
               <span className="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
               <span className="relative text-sm sm:text-base">Sign up</span>
             </span>
             <span className="absolute bottom-0 right-0 w-full h-8 sm:h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"></span>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

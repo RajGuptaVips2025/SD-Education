@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
+
 function SideBar(props) {
 
     return (
@@ -9,13 +10,13 @@ function SideBar(props) {
                 {
                     props.topics.map((col, index) => (
                         <>
-                            <div key={index} className='p-2 bg-[#1c40594d] my-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4 hover:bg-[#2d4663] hover:scale-110 duration-150 cursor-pointer'>
-                                <div className='mx-auto'>
-                                    <Link to={col.head}  smooth={true}  duration={1000} offset={-500} style={{transition:"ease-in-out"}}>
+                            <Link to={col.head} key={index} smooth={true} duration={1000} offset={-100} style={{ transition: "ease-in-out" }}>
+                                <div className='p-2 bg-[#1c40594d] my-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4 hover:bg-[#2d4663] hover:scale-110 duration-150 cursor-pointer'>
+                                    <div className='mx-auto'>
                                         <h1 className='text-center'>{col.head}</h1>
-                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </>
                     ))
                 };
@@ -23,15 +24,15 @@ function SideBar(props) {
         </div>
 
 
-)
+    )
 }
 
 export default SideBar
 
-{/* <a href={t.link}> */}
-{/* </a> */}
+{/* <a href={t.link}> */ }
+{/* </a> */ }
 
-{/* <h1 className='p-2 bg-[#174270] m-1 mt-6 mb-2 rounded font-semibold text-center pl-4'>{col.head}</h1> */}
+{/* <h1 className='p-2 bg-[#174270] m-1 mt-6 mb-2 rounded font-semibold text-center pl-4'>{col.head}</h1> */ }
 {/* {
     col.tags.map((t) => (
 

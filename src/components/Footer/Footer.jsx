@@ -2,6 +2,7 @@ import React from 'react';
 import LogoWhite from '../../assets/LogoWhite.png'
 import { svgArray } from '.';
 import { arr } from '.';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,9 +17,9 @@ const Footer = () => {
                   <ul>
                     {col.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="mb-2">
-                        <a href={item.link} className="hover:text-white">
+                        <Link to={item.link} className="hover:text-white">
                           {item.content}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -54,7 +55,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 {svgArray.map((svg, index) => (
-                  <a key={index} href={svg.link} className="text-gray-400 hover:text-white">
+                  <Link key={index} to={svg.link} className="text-gray-400 hover:text-white">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -69,7 +70,7 @@ const Footer = () => {
                         d={svg.path_D}
                       />
                     </svg>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

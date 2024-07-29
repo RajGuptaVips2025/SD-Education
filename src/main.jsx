@@ -10,6 +10,8 @@ import './index.css';
 import Home from './components/HomeFolder/Home.jsx'
 import {CssContent,HtmlContent,ExpressContent,JavascriptContent,MongodbContent,NextContent,NodeContent,ReactContent} from './components/Topics'
 import Aos from 'aos';
+import Signup from './components/Signup/Signup.jsx';
+import Login from './components/Login/Login.jsx';
 
 Aos.init()
 const router = createBrowserRouter([
@@ -52,6 +54,14 @@ const router = createBrowserRouter([
       {
         path: 'node',
         element: <NodeContent/>
+      },
+      {
+        path: 'login',
+        element: <Login/>
+      },
+      {
+        path: 'signup',
+        element: <Signup/>
       },
     ]
   }
