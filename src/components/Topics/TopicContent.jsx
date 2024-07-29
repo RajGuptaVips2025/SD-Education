@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../../App';
+import '../../App'; // Make sure to import the stylesheet containing the no-scrollbar class
 import contentjs from '../../assets/contentjs.jpg'
-import nodejsTopics from '../../utils/nodejsTopics';
 
-function NodeTopic() {
+
+
+function TopicContent(props) {
 
     const [code, setCode] = useState(`
         <!DOCTYPE html>
@@ -20,8 +21,6 @@ function NodeTopic() {
 
 
     const handleTryItYourself = () => {
-        // Redirect to a compiler with the code
-        // Replace with your actual compiler URL
         window.open('https://onecompiler.com/html', '_blank');
     };
 
@@ -29,14 +28,14 @@ function NodeTopic() {
     return (
         <>
 
-            <div className='w-[100vw] lg:w-[80vw] px-6 py-3 bg-gradient-to-b from-[#0d253c] to-[#111827] text-gray-200 flex flex-col justify-start items-start max-h-[100vh]  overflow-y-scroll '>
+            <div className='w-[100vw] lg:w-[80vw] px-6 py-3 bg-gradient-to-b from-[#0d253c] to-[#111827] text-gray-200 flex flex-col justify-start items-start min-h-[100vh] '>
                 <div className='w-[85%] mx-auto my-16'>
                     <div className='mb-8'>
                         <div className="image">
                             <img src={contentjs} className='mx-auto object-contain rounded-xl' alt="" srcset="" />
                         </div>
                         {
-                            nodejsTopics.map((points, index) => (<div key={index}>
+                            props.topics.map((points, index) => (<div key={index}>
                                 {
                                     index === 0 ?
                                         <div className='py-1 my-24'>
@@ -61,17 +60,15 @@ function NodeTopic() {
                                             <div className='my-8'>
                                                 <p className='text-xl tracking-tight'>{`${po.content}`}</p>
                                             </div>
-                                            <div className='mt-2 w-[80%] bg-[#182c3c] rounded-md p-3'>
+                                            <div className='mt-2 w-[100%] sm:w-[80%] bg-[#182c3c] rounded-md p-3'>
                                                 <ul className='list-disc px-3 '>
                                                     {
                                                         po.ulItems.map((liItem, index) => (
 
-                                                            <li key={index} className='text-lg tracking-tight my-4'>{`${liItem}`}</li>
+                                                            <li key={index} className='text-lg tracking-tight my-4 leading-10'>{`${liItem}`}</li>
                                                         ))
                                                     }
-
                                                 </ul>
-
                                             </div>
                                             {po.Example && <div className='mt-2 w-[80%] bg-[#182c3c] rounded-md p-3'>
                                                 <ul className='list-disc px-3 '>
@@ -82,12 +79,8 @@ function NodeTopic() {
                                                             <li key={index} className='text-lg tracking-tight my-4'>{`${examples}`}</li>
                                                         ))
                                                     }
-
                                                 </ul>
-
                                             </div>}
-
-
                                         </div>
                                         {po.compilerContent &&
                                             <div className=' bg-[#002C3C] w-[50vw] p-5 rounded-xl mt-8'>
@@ -128,4 +121,4 @@ function NodeTopic() {
     );
 }
 
-export default NodeTopic;
+export default TopicContent;

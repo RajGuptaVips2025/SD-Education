@@ -8,16 +8,7 @@ import {
 } from "react-router-dom";
 import './index.css';
 import Home from './components/HomeFolder/Home.jsx'
-import {
-  JsContent,
-  HtmlContent,
-  CssContent,
-  ReactContect,
-  NextjsContect,
-  MongodbContent,
-  ExpressContent,
-  NodeContent
-} from './components/ContentTopic';
+import {CssContent,HtmlContent,ExpressContent,JavascriptContent,MongodbContent,NextContent,NodeContent,ReactContent} from './components/Topics'
 import Aos from 'aos';
 
 Aos.init()
@@ -40,15 +31,15 @@ const router = createBrowserRouter([
       },
       {
         path: 'javascript',
-        element: <JsContent/>
+        element: <JavascriptContent/>
       },
       {
         path: 'react',
-        element: <ReactContect/>
+        element: <ReactContent/>
       },
       {
         path: 'nextjs',
-        element: <NextjsContect/>
+        element: <NextContent/>
       },
       {
         path: 'mongodb',

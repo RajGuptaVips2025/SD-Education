@@ -4,11 +4,9 @@ import css from '../../assets/css.png';
 import javascript from '../../assets/javascript.png';
 import react from '../../assets/react.png';
 import nextjs from '../../assets/nextjs.png';
-import graphql from '../../assets/graphql.png';
 import github from '../../assets/githubImg2.png';
 import tailwind from '../../assets/tailwind.png';
 import node from '../../assets/node.png'
-import express from '../../assets/express (1).png'
 import { Link } from 'react-router-dom';
 
 const Card = () => {

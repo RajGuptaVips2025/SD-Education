@@ -1,21 +1,11 @@
 import React from 'react'
-
-import reactTopics from '../../utils/reactTopics'
 import { Link } from 'react-scroll'
 
 function SideBar(props) {
 
     return (
-        // #121212
-
         <div className='w-[20%] max-h-[100vh] overflow-auto flex-col gap-2 text-white hidden lg:flex sticky top-0'>
             <div className='bg-gradient-to-b from-[#0d253c] to-[#111827] max-h-full rounded overflow-x-hidden overflow-y-auto'>
-                {/* <div className='p-4 flex items-center justify-between'>
-                    <div className='flex items-center gap-3'>
-
-                        <p>Your Content</p>
-                    </div>
-                </div> */}
                 {
                     props.topics.map((col, index) => (
                         <>
