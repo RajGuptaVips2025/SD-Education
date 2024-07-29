@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
 
 export default function Signup() {
   const navigate = useNavigate();
-
+  const [name, setName] = useState('')
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,8 +16,10 @@ export default function Signup() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
         navigate("/login");
+        return db.collection('users').doc(user.id).set({
+          name, email
+        })
         // ...
       })
       .catch((error) => {
@@ -38,6 +40,8 @@ export default function Signup() {
               type="text"
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="fullname"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Full Name"
             />
             <input

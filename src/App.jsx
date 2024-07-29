@@ -9,14 +9,15 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import SideBar from "./components/SideBar/SideBar";
 import InfiniteMovingCardsDemo from "./components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
-import Blog from "./components/Blogs/Blog";
-import BlogList from "./components/Blogs/BlogList";
+import Blog from "./components/Reviews/Review.jsx";
+import BlogList from "./components/Reviews/ReviewList.jsx";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import React, { useState, useEffect } from "react";
 import Html from './components/HTMLContent/Html';
 import CodeCompiler from "./components/Compiler/CodeCompiler.jsx";
-
+import Review from "./components/Reviews/Review.jsx";
+import ReviewList from "./components/Reviews/ReviewList.jsx";
 const App = () => {
   const [isAuth, setIsAuth] = useState(null);
   const [userId, setUserId] = useState('')
@@ -54,21 +55,25 @@ const App = () => {
               {/* <Hero /> */}
               <Card />
               <InfiniteMovingCardsDemo />
-              {/* <SideBar/> */}
+              <SideBar/>
               <Footer />
             </>
           }
         />
+        {/* <Route path="/about" element={<About />} /> */}
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
-          path="/blog"
-          element={isAuth ? <Blog userId={userId} /> : <Navigate to="/login" />}
+          path="/review"
+          element={
+            isAuth ? <Review userId={userId} /> : <Navigate to="/login" />
+          }
         />
         <Route
-          path="/blog/user"
+          path="/review/user"
           element={
-            isAuth ? <BlogList userId={userId} /> : <Navigate to="/login" />
+            isAuth ? <ReviewList userId={userId} /> : <Navigate to="/login" />
           }
         />
         <Route path="/compiler" element={<CodeCompiler />} />

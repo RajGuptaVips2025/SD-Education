@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 
 export default function CodeCompiler() {
-  const [htmlContent, setHtmlContent] = useState("");
-  const [cssContent, setCssContent] = useState("");
-  const [jsContent, setJsContent] = useState("");
+  const [htmlContent, setHtmlContent] = useState(
+    "<!DOCTYPE html>\n<html>\n<head> </head>\n<body> <h1> Hello world</h1>\n<script>  </script>\n</body>\n</html>"
+  );
+  const [cssContent, setCssContent] = useState(
+    "body {\n  font-family: Arial, sans-serif;\n}"
+  );
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Retrieve the theme preference from localStorage or default to false
     const savedTheme = localStorage.getItem("isDarkMode");
@@ -26,14 +29,13 @@ export default function CodeCompiler() {
         </head>
         <body>
           ${htmlContent}
-          <script>${jsContent}</script>
         </body>
       </html>
     `;
     document.open();
     document.write(documentContents);
     document.close();
-  }, [htmlContent, cssContent, jsContent, isDarkMode]);
+  }, [htmlContent, cssContent, isDarkMode]);
 
   useEffect(() => {
     // Save the theme preference to localStorage whenever it changes
@@ -42,7 +44,7 @@ export default function CodeCompiler() {
 
   return (
     <div
-      className={`p-4 min-h-screen ${
+      className={`p-4 min-h-screen  ${
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
@@ -55,7 +57,7 @@ export default function CodeCompiler() {
           Toggle {isDarkMode ? "Light" : "Dark"} Mode
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div
           className={`p-4 rounded shadow-md ${
             isDarkMode ? "bg-gray-800" : "bg-white"
@@ -88,23 +90,6 @@ export default function CodeCompiler() {
             placeholder="CSS goes here..."
             value={cssContent}
             onChange={(e) => setCssContent(e.target.value)}
-          />
-        </div>
-        <div
-          className={`p-4 rounded shadow-md ${
-            isDarkMode ? "bg-gray-800" : "bg-white"
-          }`}
-        >
-          <h2 className="text-lg font-bold mb-2">JavaScript</h2>
-          <textarea
-            className={`w-full p-2 border rounded h-40 ${
-              isDarkMode
-                ? "bg-gray-700 text-white"
-                : "bg-gray-200 text-gray-900"
-            }`}
-            placeholder="JavaScript goes here..."
-            value={jsContent}
-            onChange={(e) => setJsContent(e.target.value)}
           />
         </div>
       </div>
