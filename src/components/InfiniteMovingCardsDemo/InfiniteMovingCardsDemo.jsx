@@ -58,7 +58,7 @@ export default function InfiniteMovingCardsDemo() {
   return (
     <div className="h-[40rem] flex flex-col antialiased bg-gradient-to-b from-[#5e626c] to-[#111827] dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <div>
-        <h1 className="text-center text-6xl text-[#363161] font-bold pb-12">Our Reviews</h1>
+        <h1 className="text-center text-6xl text-[#1c2326] font-bold pb-12">Our Reviews</h1>
         <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
       </div>
       <div className="flex justify-center items-center relative mt-16">
