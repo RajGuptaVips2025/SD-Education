@@ -28,7 +28,7 @@ function TopicContent(props) {
     return (
         <>
 
-            <div className='w-[100vw] lg:w-[80vw] px-6 py-3 bg-gradient-to-b from-[#0d253c] to-[#111827] text-gray-200 flex flex-col justify-start items-start min-h-[100vh] '>
+            <div className='w-[100vw] lg:w-[80vw] sm:px-6 py-3 bg-gradient-to-b from-[#0d253c] to-[#111827] text-gray-200 flex flex-col justify-start items-start min-h-[100vh] overflow-x-hidden'>
                 <div className='w-[85%] mx-auto my-16'>
                     <div className='mb-8'>
                         <div className="image">
@@ -40,7 +40,7 @@ function TopicContent(props) {
                                     index === 0 ?
                                         <div className='py-1 my-24'>
                                             <div className='py-1 mt-12 mb-8'>
-                                                <span className='text-6xl underline underline-offset-8'>{points.head}</span>
+                                                <span className='text-3xl sm:text-6xl underline underline-offset-8'>{points.head}</span>
                                             </div>
 
                                             <div className='my-8'>
@@ -53,30 +53,30 @@ function TopicContent(props) {
                                 {points.Topics.map((po, index) => (
                                     <div key={index} id={po.heading}>
                                         <div className='mt-36 mb-8' >
-                                            <p className='text-4xl underline underline-offset-[15px]'>{` ${po.heading}`} </p>
+                                            <p className='text-3xl sm:text-4xl underline underline-offset-[15px]'>{` ${po.heading}`} </p>
                                         </div>
 
                                         <div className='mt-2'>
                                             <div className='my-8'>
-                                                <p className='text-xl tracking-tight'>{`${po.content}`}</p>
+                                                <p className=' sm:text-xl tracking-tight'>{`${po.content}`}</p>
                                             </div>
                                             <div className='mt-2 w-[100%] sm:w-[80%] bg-[#182c3c] rounded-md p-3'>
                                                 <ul className='list-disc px-3 '>
                                                     {
                                                         po.ulItems.map((liItem, index) => (
 
-                                                            <li key={index} className='text-lg tracking-tight my-4 leading-10'>{`${liItem}`}</li>
+                                                            <li key={index} className='text-sm sm:text-lg tracking-tight my-4 leading-10'>{`${liItem}`}</li>
                                                         ))
                                                     }
                                                 </ul>
                                             </div>
-                                            {po.Example && <div className='mt-2 w-[80%] bg-[#182c3c] rounded-md p-3'>
+                                            {po.Example && <div className='mt-2 w-[100%] sm:w-[80%] bg-[#182c3c] rounded-md p-3'>
                                                 <ul className='list-disc px-3 '>
                                                     <span className='text-2xl'>Examples:</span><br />
                                                     {
                                                         po.Example.map((examples, index) => (
 
-                                                            <li key={index} className='text-lg tracking-tight my-4'>{`${examples}`}</li>
+                                                            <li key={index} className='sm:text-lg tracking-tight my-4'>{`${examples}`}</li>
                                                         ))
                                                     }
                                                 </ul>
