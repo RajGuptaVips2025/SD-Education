@@ -4,7 +4,7 @@ import css from '../../assets/css.png';
 import javascript from '../../assets/javascript.png';
 import react from '../../assets/react.png';
 import nextjs from '../../assets/nextjs.png';
-import github from '../../assets/githubImg2.png';
+import mongodb from '../../assets/mongodb.png'
 import tailwind from '../../assets/tailwind.png';
 import node from '../../assets/node.png'
 import { Link } from 'react-router-dom';
@@ -61,9 +61,9 @@ const Card = () => {
         },
         {
             id: 7,
-            src: github,
-            link:"/github",
-            title: 'GitHub',
+            src: mongodb,
+            link:"/mongodb",
+            title: 'MongoDB',
             style: 'hover:shadow-sky-500',
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
@@ -88,7 +88,7 @@ const Card = () => {
 
                         <div data-aos="fade-up"
                             key={index}
-                            className="min-w-[70vw] sm:min-w-[20vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white shadow-custom duration-500 "
+                            className="min-w-[70vw] sm:min-w-[20vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white bg-opacity-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border border-white border-opacity-32 duration-500 "
                             >
                             <img className="w-[100px] mx-auto mt-3 rounded-md" src={item.src} alt={item.title} />
                             <div className="px-6 py-4">
