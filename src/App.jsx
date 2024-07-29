@@ -1,4 +1,3 @@
-
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
@@ -7,14 +6,10 @@ import Footer from "./components/Footer/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
-import SideBar from "./components/SideBar/SideBar";
 import InfiniteMovingCardsDemo from "./components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
-import Blog from "./components/Reviews/Review.jsx";
-import BlogList from "./components/Reviews/ReviewList.jsx";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase.js";
 import React, { useState, useEffect } from "react";
-import Html from './components/HTMLContent/Html';
 import CodeCompiler from "./components/Compiler/CodeCompiler.jsx";
 import Review from "./components/Reviews/Review.jsx";
 import ReviewList from "./components/Reviews/ReviewList.jsx";
@@ -55,7 +50,6 @@ const App = () => {
               {/* <Hero /> */}
               <Card />
               <InfiniteMovingCardsDemo />
-              <SideBar/>
               <Footer />
             </>
           }
