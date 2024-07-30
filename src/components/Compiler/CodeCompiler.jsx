@@ -44,7 +44,7 @@ export default function CodeCompiler() {
 
   return (
     <div
-      className={`p-4 min-h-screen  ${
+      className={`p-4 min-h-screen mt-20  ${
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
