@@ -19,7 +19,7 @@ const Card = () => {
             link:"/html",
             title: 'HTML',
             style: 'hover:shadow-orange-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "HTML structures web content with elements like headings, paragraphs, and links, forming the backbone of web pages.",
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ const Card = () => {
             link:"/css",
             title: 'CSS',
             style: 'hover:shadow-blue-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "CSS styles and layouts web pages, controlling visual aspects like colors, fonts, and spacing.",
         },
         {
             id: 3,
@@ -35,7 +35,7 @@ const Card = () => {
             link:"/javascript",
             title: 'JavaScript',
             style: 'hover:shadow-yellow-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "JavaScript enables interactive web elements, allowing for dynamic content updates and user interactions.",
         },
         {
             id: 4,
@@ -43,15 +43,7 @@ const Card = () => {
             link:"/tailwind",
             title: 'TailWind',
             style: 'hover:shadow-pink-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        },
-        {
-            id: 5,
-            src: bootstrap,
-            link:"/bootstrap",
-            title: 'Bootstrap',
-            style: 'hover:shadow-pink-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "Tailwind CSS is a utility-first CSS framework that provides low-level utility classes for building custom designs directly in your markup.",
         },
         {
             id: 6,
@@ -59,7 +51,7 @@ const Card = () => {
             link:"/react",
             title: 'React',
             style: 'hover:shadow-sky-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "React is a JavaScript library for building user interfaces, using a component-based architecture to create reusable UI elements.",
         },
         {
             id: 7,
@@ -67,7 +59,7 @@ const Card = () => {
             link:"/nextjs",
             title: 'Next.js',
             style: 'hover:shadow-sky-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "Next.js is a React framework that enables server-side rendering and static site generation, improving performance and SEO for web applications.",
         },
         {
             id: 8,
@@ -75,15 +67,15 @@ const Card = () => {
             link:"/node",
             title: 'Node Js',
             style: 'hover:shadow-pink-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "Node.js is a runtime environment that lets you run JavaScript on the server side, enabling backend development.",
         },
         {
             id: 9,
             src: expressjs,
-            link:"/expressjs",
-            title: 'ExpressJS',
+            link:"/express",
+            title: 'Express',
             style: 'hover:shadow-sky-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "Express is a minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications.",
         },
         {
             id: 10,
@@ -91,7 +83,7 @@ const Card = () => {
             link:"/mongodb",
             title: 'MongoDB',
             style: 'hover:shadow-sky-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            content: "MongoDB is a NoSQL database that stores data in flexible, JSON-like documents, allowing for scalable and efficient data management.",
         },
     ];
 
@@ -106,12 +98,12 @@ const Card = () => {
 
                         <div data-aos="fade-up"
                             key={index}
-                            className="min-w-[70vw] sm:min-w-[20vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white bg-opacity-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border border-white border-opacity-32 duration-500 "
+                            className="min-w-[70vw] sm:min-w-[25vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white bg-opacity-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border border-white border-opacity-32 duration-500 "
                             >
                             <img className="w-[100px] mx-auto mt-3 rounded-md" src={item.src} alt={item.title} />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl my-2 text-center text-gray-700">{item.title}</div>
-                                <p className="text-base text-gray-500">
+                                <p className="text-base h-28 text-gray-500">
                                     {item.content}
                                 </p>
                                 <div className="flex justify-center mt-2">

@@ -12,8 +12,8 @@ export const svgArray = [
 
 
    export const arr = [{
-        head: "Subject",
-        items: [{ content: "Marketing", link: "#" }, { content: "Analytics", link: "#" }, { content: "Commerce", link: "#" }, { content: "Insight", link: "#" }]
+        head: "Founder",
+        items: [{ content: "Rohit", link: "#" }, { content: "Harsh", link: "#" }, { content: "Raj", link: "#" }, { content: "Rushil", link: "#" }]
       }, {
         head: "Support",
         items: [{ content: "Pricing", link: "#" }, { content: "Documentation", link: "#" }, { content: "Guides", link: "#" }, { content: "API Status", link: "#" }]

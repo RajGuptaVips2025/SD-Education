@@ -1,30 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../../App'; // Make sure to import the stylesheet containing the no-scrollbar class
-import contentjs from '../../assets/contentjs.jpg'
 import { Link } from 'react-router-dom';
 
 
 
 function TopicContent(props) {
-
-    const [code, setCode] = useState(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-        <title>Page Title</title>
-        </head>
-        <body>
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
-        </body>
-        </html>
-        `);
-
-
-    const handleTryItYourself = () => {
-        window.open('https://onecompiler.com/html', '_blank');
-    };
-
     // #081827
     return (
         <>
