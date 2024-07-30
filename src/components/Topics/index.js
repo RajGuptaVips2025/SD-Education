@@ -6,5 +6,6 @@ import MongodbContent from './MongodbContent'
 import NextContent from './NextContent'
 import NodeContent from './NodeContent'
 import ReactContent from './ReactContent'
+import TailwindContent from './TailwindContent'
 
-export {CssContent,HtmlContent,ExpressContent,JavascriptContent,MongodbContent,NextContent,NodeContent,ReactContent}
+export {CssContent,HtmlContent,ExpressContent,JavascriptContent,MongodbContent,NextContent,NodeContent,ReactContent,TailwindContent}

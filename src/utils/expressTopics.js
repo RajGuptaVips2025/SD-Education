@@ -1,6 +1,7 @@
 const expressTopics = [
     {
         head: "Introduction to Express.js",
+        headContent: "Express.js, commonly known as Express, is a minimalist and flexible web application framework for Node.js. It simplifies the process of building robust and scalable web applications and APIs by providing a thin layer of fundamental web application features. Express offers a straightforward API for handling HTTP requests, routing, and middleware integration, allowing developers to efficiently manage and respond to different types of web requests.\n\nKey features of Express include a powerful routing system that supports dynamic route handling, middleware functions that process requests and responses, and easy integration with various databases and templating engines. Its lightweight and unopinionated design means developers have the flexibility to structure applications as needed, while still benefiting from its robust functionality.\n\nExpress's simplicity and versatility make it a popular choice for creating server-side applications and RESTful APIs, contributing to its widespread use in the Node.js ecosystem.",
         Topics: [
             {
                 heading: "Introduction to Express.js",

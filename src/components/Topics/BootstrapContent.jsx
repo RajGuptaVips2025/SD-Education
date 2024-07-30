@@ -3,7 +3,7 @@ import ContentBox from '../ContentTopic/ContentBox'
 import cssTopics from '../../utils/cssTopics'
 import content_css_mini_logo from '../../assets/content_css_mini_ogo.jpg'
 
-function CssContent() {
+function BootstrapContent() {
   return (
     <>
     <ContentBox topicss={cssTopics} image={content_css_mini_logo}/>
@@ -11,4 +11,4 @@ function CssContent() {
   )
 }
 
-export default CssContent
+export default BootstrapContent

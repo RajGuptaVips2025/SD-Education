@@ -17,6 +17,7 @@ import {
   NextContent,
   NodeContent,
   ReactContent,
+  TailwindContent,
 } from "./components/Topics";
 import Aos from "aos";
 import Signup from "./components/Signup/Signup.jsx";
@@ -76,9 +77,7 @@ const Root = () => {
         },
         {
           path: "javascript",
-          element: (
-            <JavascriptContent />
-          ),
+          element: <JavascriptContent />,
         },
         {
           path: "react",
@@ -90,19 +89,19 @@ const Root = () => {
         },
         {
           path: "mongodb",
-          element: (
-            <MongodbContent />
-          ),
+          element: <MongodbContent />,
         },
         {
           path: "express",
-          element: (
-            <ExpressContent />
-          ),
+          element: <ExpressContent />,
         },
         {
           path: "node",
           element: <NodeContent />,
+        },
+        {
+          path: 'tailwind',
+          element: <TailwindContent />
         },
         {
           path: "login",

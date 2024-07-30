@@ -3,7 +3,7 @@ import Logo from "../../assets/Logo.png";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../firebase.js";
 
-import { Link } from "react-router-dom";
+// import { a } from "react-router-dom";
 
 function Navbar({ isAuth, setIsAuth }) {
   const links = [
@@ -115,7 +115,7 @@ function Navbar({ isAuth, setIsAuth }) {
                 onClick={handleDropdownToggle}
                 className="text-lg text-gray-800 group transition duration-300 flex items-center"
               >
-                More
+                Courses
                 <svg
                   className="ml-1 h-4 w-4 transition-transform duration-300 transform"
                   style={{
@@ -262,15 +262,7 @@ function Navbar({ isAuth, setIsAuth }) {
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </a>
             </li>
-            <li>
-              <a
-                href="#courses"
-                className="text-lg text-gray-800 group transition duration-300"
-              >
-                Courses
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
-            </li>
+            
             <li>
               <a
                 href="/review"

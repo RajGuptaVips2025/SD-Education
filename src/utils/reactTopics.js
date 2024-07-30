@@ -1,6 +1,7 @@
 const reactTopics = [
     {
         head: "React Tutorial",
+        headContent:"React is an open-source JavaScript library developed by Facebook for building user interfaces, especially for single-page applications (SPAs). It allows developers to create dynamic, interactive UIs using a component-based architecture. In React, the user interface is broken down into reusable, self-contained components, each managing its own state and rendering its own output. This modular approach enhances code reusability and maintainability.\n\nReact uses a virtual DOM, which is an in-memory representation of the actual DOM. When the state of a component changes, React updates the virtual DOM first, compares it with the previous version, and efficiently applies the necessary changes to the real DOM. This process minimizes performance bottlenecks and enhances user experience.\n\nReact also employs JSX (JavaScript XML), a syntax that combines HTML-like code with JavaScript, making it easier to write and understand UI components. Its flexibility, performance, and strong community support have made React a popular choice for modern web development.",
         Topics: [
             {
                 heading: "React Get Started",

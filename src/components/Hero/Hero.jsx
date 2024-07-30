@@ -27,13 +27,12 @@ function Hero() {
             <h1 className='text-center md:text-start text-[30px] md:text-[55px] sm:text-[50px] font-bold leading-tight'>
               <span>Learn </span>
               <span className='text-[#f3e388]'>
-                <TypedText texts={['React', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS', 'Next js']} />
+                <TypedText texts={['React', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS', 'Next js', 'MongoDB', 'Express', 'NodeJs', 'Bootstrap']} />
               </span>
             </h1>
             <p className='text-center mt-4 w-full md:w-4/5 md:text-start text-[18px] md:text-[18px] sm:text-[25px]'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At velit eius repellat quaerat, obcaecati enim reprehenderit quas, nesciunt dolores officia minus delectus. In ex animi eveniet delectus laudantium quae cumque.
-            </p>
-            <Link to="/signup" className="relative inline-block text-lg group mt-4">
+            SD Education offers a user-friendly platform for beginners to learn programming with HTML, CSS, JavaScript, and React. Its interactive curriculum and responsive design ensure easy navigation, promoting inclusive and equitable quality education in line with SDG 4. </p> 
+              <Link to="/signup" className="relative inline-block text-lg group mt-4">
               <span className="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                 <span className="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
                 <span className="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
