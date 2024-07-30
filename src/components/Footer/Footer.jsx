@@ -2,6 +2,7 @@ import React from 'react';
 import LogoWhite from '../../assets/LogoWhite.png'
 import { svgArray } from '.';
 import { arr } from '.';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,23 +10,23 @@ const Footer = () => {
       <footer className="bg-gray-900 pt-28 pb-8 text-gray-400 py-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-16">
           <div className="flex flex-col gap-10 sm:flex-col md:flex-col lg:flex-row items-center justify-between">
-            <div data-aos="fade-right" className="flex gap-16 md:gap-12 justify-center flex-row flex-wrap mb-6">
+            <div className="flex gap-16 md:gap-12 justify-center flex-row flex-wrap mb-6">
               {arr.map((col, index) => (
                 <div key={index} className="mb-6 md:mr-16 w-1/3 md:w-1/12">
                   <h5 className="text-white uppercase font-bold mb-4">{col.head}</h5>
                   <ul>
                     {col.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="mb-2">
-                        <a href={item.link} className="hover:text-white">
+                        <Link to={item.link} className="hover:text-white">
                           {item.content}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-            <div  data-aos="fade-left" className="flex flex-col md:flex-col lg:flex-row items-center ml-5 justify-between w-full sm:w-auto">
+            <div className="flex flex-col md:flex-col lg:flex-row items-center ml-5 justify-between w-full sm:w-auto">
               <div className="mb-6 md:mr-10 w-full sm:w-auto">
                 <h5 className="text-white uppercase font-bold mb-4">
                   Subscribe to our newsletter
@@ -54,7 +55,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4">
                 {svgArray.map((svg, index) => (
-                  <a key={index} href={svg.link} className="text-gray-400 hover:text-white">
+                  <Link key={index} to={svg.link} className="text-gray-400 hover:text-white">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -69,7 +70,7 @@ const Footer = () => {
                         d={svg.path_D}
                       />
                     </svg>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

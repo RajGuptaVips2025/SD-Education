@@ -1,6 +1,7 @@
 const mongodbTopics = [
     {
         head: "Introduction to MongoDB",
+        headContent: "MongoDB is a widely used open-source NoSQL database designed for handling large volumes of unstructured or semi-structured data. Unlike traditional relational databases, MongoDB stores data in flexible, JSON-like documents called BSON (Binary JSON). This schema-less structure allows for easy and dynamic storage of diverse data types, making it suitable for modern, scalable applications.\n\nMongoDB's key features include horizontal scaling through sharding, which distributes data across multiple servers, and its ability to handle large amounts of data efficiently. It supports rich querying, indexing, and aggregation capabilities, enabling complex data retrieval and analysis. The database also offers high availability through replica sets, ensuring data redundancy and reliability.\n\nIts flexible data model and robust performance make MongoDB a popular choice for applications requiring high performance and scalability, such as content management systems, real-time analytics, and Internet of Things (IoT) applications.",
         Topics: [
             {
                 heading: "Introduction to MongoDB",

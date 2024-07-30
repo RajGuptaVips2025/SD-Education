@@ -1,6 +1,7 @@
 const nodejsTopics = [
     {
         head: "Introduction to Node.js",
+        headContent: "Node.js is an open-source, cross-platform runtime environment that allows developers to execute JavaScript code on the server side. Built on Chrome's V8 JavaScript engine, Node.js enables the creation of scalable and high-performance network applications, such as web servers and APIs. It uses an event-driven, non-blocking I/O model, which allows it to handle multiple connections concurrently with minimal overhead, making it ideal for real-time applications like chat services and live updates.\n\nNode.js comes with a built-in package manager, npm, which provides access to a vast ecosystem of libraries and tools, facilitating rapid development. Its single-threaded event loop efficiently manages asynchronous operations, preventing bottlenecks that can occur with traditional multi-threaded server environments.\n\nBy using JavaScript on both the client and server sides, Node.js streamlines development processes, improves code consistency, and allows developers to leverage their existing JavaScript skills for full-stack development.",
         Topics: [
             {
                 heading: "Introduction to Node.js",

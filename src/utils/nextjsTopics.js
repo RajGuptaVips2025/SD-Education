@@ -1,6 +1,7 @@
 const nextjsTopics = [
     {
         head: "Next.js Introduction",
+        headContent:"Next.js is an open-source React framework that enhances the development of web applications by providing built-in support for server-side rendering (SSR) and static site generation (SSG). Developed by Vercel, it extends React’s capabilities, allowing for the creation of high-performance, scalable applications.\n\nNext.js optimizes web performance by generating HTML on the server for each request (SSR), which improves search engine optimization (SEO) and reduces initial load times. It also supports static site generation, where pages are pre-rendered at build time for faster load speeds. Additionally, Next.js includes features like automatic code splitting, which ensures that only the necessary JavaScript is loaded for each page, and built-in support for CSS and Sass, simplifying styling.\n\nWith its integrated API routes, Next.js allows developers to handle backend logic within the same project. This comprehensive framework streamlines the development process, making it easier to build efficient, dynamic web applications.",
         Topics: [
             {
                 heading: "Introduction to Next.js",

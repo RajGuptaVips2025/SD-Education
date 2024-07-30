@@ -4,11 +4,11 @@ import css from '../../assets/css.png';
 import javascript from '../../assets/javascript.png';
 import react from '../../assets/react.png';
 import nextjs from '../../assets/nextjs.png';
-import graphql from '../../assets/graphql.png';
-import github from '../../assets/githubImg2.png';
+import mongodb from '../../assets/mongodb.png'
 import tailwind from '../../assets/tailwind.png';
+import expressjs from '../../assets/expressjs.png';
 import node from '../../assets/node.png'
-import express from '../../assets/express (1).png'
+import bootstrap from '../../assets/bootstrap.png'
 import { Link } from 'react-router-dom';
 
 const Card = () => {
@@ -41,12 +41,20 @@ const Card = () => {
             id: 4,
             src: tailwind,
             link:"/tailwind",
-            title: 'Tailwind',
-            style: 'hover:shadow-sky-500',
+            title: 'TailWind',
+            style: 'hover:shadow-pink-500',
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
         {
             id: 5,
+            src: bootstrap,
+            link:"/bootstrap",
+            title: 'Bootstrap',
+            style: 'hover:shadow-pink-500',
+            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        },
+        {
+            id: 6,
             src: react,
             link:"/react",
             title: 'React',
@@ -54,18 +62,10 @@ const Card = () => {
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
         {
-            id: 6,
+            id: 7,
             src: nextjs,
             link:"/nextjs",
             title: 'Next.js',
-            style: 'hover:shadow-sky-500',
-            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        },
-        {
-            id: 7,
-            src: github,
-            link:"/github",
-            title: 'GitHub',
             style: 'hover:shadow-sky-500',
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
@@ -75,6 +75,22 @@ const Card = () => {
             link:"/node",
             title: 'Node Js',
             style: 'hover:shadow-pink-500',
+            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        },
+        {
+            id: 9,
+            src: expressjs,
+            link:"/expressjs",
+            title: 'ExpressJS',
+            style: 'hover:shadow-sky-500',
+            content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        },
+        {
+            id: 10,
+            src: mongodb,
+            link:"/mongodb",
+            title: 'MongoDB',
+            style: 'hover:shadow-sky-500',
             content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
         },
     ];
@@ -90,7 +106,7 @@ const Card = () => {
 
                         <div data-aos="fade-up"
                             key={index}
-                            className="min-w-[70vw] sm:min-w-[20vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white shadow-custom duration-500 "
+                            className="min-w-[70vw] sm:min-w-[20vw] max-w-[20vw] mb-3 rounded-lg overflow-hidden hover:scale-105 bg-white bg-opacity-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border border-white border-opacity-32 duration-500 "
                             >
                             <img className="w-[100px] mx-auto mt-3 rounded-md" src={item.src} alt={item.title} />
                             <div className="px-6 py-4">

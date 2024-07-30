@@ -8,17 +8,12 @@ import {
 } from "react-router-dom";
 import './index.css';
 import Home from './components/HomeFolder/Home.jsx'
-import {
-  JsContent,
-  HtmlContent,
-  CssContent,
-  ReactContect,
-  NextjsContect,
-  MongodbContent,
-  ExpressContent,
-  NodeContent
-} from './components/ContentTopic';
+import {CssContent,HtmlContent,TailwindContent,ExpressContent,JavascriptContent,MongodbContent,NextContent,NodeContent,ReactContent} from './components/Topics'
 import Aos from 'aos';
+import Signup from './components/Signup/Signup.jsx';
+import Login from './components/Login/Login.jsx';
+import Compiler from './components/Compiler/Compiler.jsx';
+
 
 Aos.init()
 const router = createBrowserRouter([
@@ -39,16 +34,20 @@ const router = createBrowserRouter([
         element: <CssContent/>
       },
       {
+        path: 'tailwind',
+        element: <TailwindContent/>
+      },
+      {
         path: 'javascript',
-        element: <JsContent/>
+        element: <JavascriptContent/>
       },
       {
         path: 'react',
-        element: <ReactContect/>
+        element: <ReactContent/>
       },
       {
         path: 'nextjs',
-        element: <NextjsContect/>
+        element: <NextContent/>
       },
       {
         path: 'mongodb',
@@ -61,6 +60,18 @@ const router = createBrowserRouter([
       {
         path: 'node',
         element: <NodeContent/>
+      },
+      {
+        path: 'login',
+        element: <Login/>
+      },
+      {
+        path: 'signup',
+        element: <Signup/>
+      },
+      {
+        path: 'compiler',
+        element: <Compiler/>
       },
     ]
   }

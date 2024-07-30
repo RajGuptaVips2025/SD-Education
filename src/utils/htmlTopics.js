@@ -1,6 +1,7 @@
 const htmlTopics = [
     {
         head: "HTML Introduction",
+        headContent: "HTML (HyperText Markup Language) is the standard markup language used to create and design web pages. It structures content on the web using a series of elements and tags, such as <h1> for headings, <p> for paragraphs, and <a> for links. Each element can have attributes that provide additional information, such as href for hyperlinks and src for images. An HTML document begins with a <!DOCTYPE html> declaration to define the document type, followed by <html> to encompass the entire content, <head> for metadata and links to scripts or stylesheets, and <body> for the visible content on the page. \n\n HTML is essential for web development, providing the basic framework that browsers interpret and display.It allows for the incorporation of multimedia elements, forms, and interactive features through additional technologies like CSS(for styling) and JavaScript(for functionality).HTML is the foundation of web page creation, ensuring content is structured and displayed correctly across different browsers and devices.",
         Topics: [
             {
                 heading: "Introduction to HTML",
@@ -850,7 +851,7 @@ const htmlTopics = [
                 ]
             }
         ]
-    }, 
+    },
     {
         head: "HTML Canvas",
         Topics: [
@@ -966,7 +967,7 @@ const htmlTopics = [
             }
         ]
     }
-    
+
 
 ]
 
