@@ -4,7 +4,8 @@ import signin from "../../assets/signin.png";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, githubProvider, googleProvider } from "../../firebase.js";
 import { useNavigate } from "react-router-dom";
-import Navbar from '../Navbar/Navbar.jsx'
+import Navbar from "../Navbar/Navbar.jsx";
+
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -31,15 +32,14 @@ export default function Login() {
       await signInWithPopup(auth, googleProvider);
       navigate("/");
       console.log("User signed in");
-       const user = result.user;
-       return db.collection("users").doc(user.uid).set(
-         {
-           name: user.displayName,
-           email: user.email,
-         },
-         { merge: true }
-       );
-      
+      const user = result.user;
+      return db.collection("users").doc(user.uid).set(
+        {
+          name: user.displayName,
+          email: user.email,
+        },
+        { merge: true }
+      );
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }
@@ -55,10 +55,10 @@ export default function Login() {
   };
 
   return (
-    <>
-      {/* source:https://codepen.io/owaiswiz/pen/jOPvEPB */}
+     <div className="max-h-screen bg-gray-100 text-gray-900  justify-center mt-12">
+    
       <Navbar />
-      <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
+      <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-cente">
         <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
             <div>
@@ -179,6 +179,7 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </>
+    
+     </div>
   );
 }

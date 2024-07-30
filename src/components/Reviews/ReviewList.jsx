@@ -61,7 +61,7 @@ const ReviewList = ({ userId }) => {
           </h1>
         </div>
       ) : (
-        <div className="max-w-4xl mx-auto my-8 p-6">
+        <div className="max-w-4xl mx-auto my-8 p-6 mt-24">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">
             Your Reviews
           </h2>

@@ -1,5 +1,3 @@
-
-
 const arr = [{
     head: "Subject",
     items: [{ content: "Marketing", link: "#" }, { content: "Analytics", link: "#" }, { content: "Commerce", link: "#" }, { content: "Insight", link: "#" }]
@@ -17,12 +15,6 @@ const arr = [{
     items: [{ content: "Claim", link: "#" }, { content: "Privacy", link: "#" }, { content: "Terms", link: "#" }]
     
   }]
-
-
-
-
-
-
 
 export default arr;
 

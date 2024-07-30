@@ -1,14 +1,26 @@
-.banner {
-  background-image: url('./assets/herobg.png');
+/* .banner {
+  background-image: url('./assets/banner-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   object-fit: cover;
-}
+} */
 
 
 .shadow-custom {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
 }
 
 
