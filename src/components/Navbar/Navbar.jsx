@@ -82,7 +82,6 @@ function Navbar({ isAuth, setIsAuth }) {
       alert("Please Login");
     }
   }
-
   return (
     <header
       className={`fixed w-full top-0 z-50 border-x-[3px] border-b-[3px] border-t-0 shadow-md duration-500 ${
@@ -269,6 +268,15 @@ function Navbar({ isAuth, setIsAuth }) {
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 Home
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/"
+                className="text-lg text-gray-800 group transition duration-300"
+              >
+                compiler
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </a>
             </li>
