@@ -92,7 +92,7 @@ const ReviewForm = ({ userId }) => {
   return (
     <div className="max-w-2xl mx-auto p-8 bg-slate-200 rounded-lg shadow-lg mt-24  transition-shadow duration-300 hover:shadow-xl">
       <h1 className="text-4xl font-semibold text-gray-800 mb-6">
-        Write a New Story
+        Write a Review
       </h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-6">

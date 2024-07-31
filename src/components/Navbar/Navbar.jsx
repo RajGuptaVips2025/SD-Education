@@ -63,10 +63,25 @@ function Navbar({ isAuth, setIsAuth }) {
     console.log(isAuth);
   }, [isAuth]);
 
-  const logOut = () => {
-    signOut(auth);
-    setIsAuth(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+  const logOut = async () => {
+    setIsLoggingOut(true);
+    try {
+      await signOut(auth);
+      setIsAuth(false);
+    } catch (error) {
+      console.error("Error signing out: ", error);
+    } finally {
+      setIsLoggingOut(false);
+    }
   };
+
+  function handleLogin() {
+    if (!isAuth) {
+      alert("Please Login");
+    }
+  }
 
   return (
     <header
@@ -97,6 +112,15 @@ function Navbar({ isAuth, setIsAuth }) {
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 Home
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/compiler"
+                className="text-lg text-gray-800 group transition duration-300"
+              >
+                Compiler
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </a>
             </li>
@@ -149,6 +173,7 @@ function Navbar({ isAuth, setIsAuth }) {
             </li>
             <li>
               <a
+                onClick={handleLogin}
                 href="/review"
                 className="text-lg text-gray-800 group transition duration-300"
               >

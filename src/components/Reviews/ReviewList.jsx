@@ -5,6 +5,7 @@ import {
   where,
   doc,
   deleteDoc,
+  orderBy,
 } from "firebase/firestore";
 import { db } from "../../firebase";
 import React, { useState, useEffect } from "react";
@@ -37,7 +38,10 @@ const ReviewList = ({ userId }) => {
   const fetchReviews = async () => {
     try {
       const postsRef = collection(db, "reviews");
-      const q = query(postsRef, where("id", "==", userId)); // Adjust the field name if needed
+      const q = query(
+        postsRef,
+        where("id", "==", userId)
+      );
 
       const querySnapshot = await getDocs(q);
       const newData = querySnapshot.docs.map((doc) => ({
@@ -82,7 +86,10 @@ const ReviewList = ({ userId }) => {
                     </h3>
                     <p className="text-gray-700">{review.content}</p>
                   </div>
-                  <button className="mr-4" onClick={() => handleEdit(review.id)}>
+                  <button
+                    className="mr-4"
+                    onClick={() => handleEdit(review.id)}
+                  >
                     <i className="fa-solid fa-edit text-xl cursor-pointer"></i>
                   </button>
                   <button onClick={() => deleteReview(review.id)}>
