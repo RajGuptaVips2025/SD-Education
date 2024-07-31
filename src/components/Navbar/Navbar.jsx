@@ -100,15 +100,6 @@ function Navbar({ isAuth, setIsAuth }) {
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </a>
             </li>
-            <li>
-              <a
-                href="/compiler"
-                className="text-lg text-gray-800 group transition duration-300"
-              >
-                Compiler
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
-            </li>
             <li className="relative">
               <button
                 id="dropdown-button"
@@ -180,7 +171,10 @@ function Navbar({ isAuth, setIsAuth }) {
         </nav>
         <div className="flex items-center gap-3">
           {isAuth ? (
-            <a href="/login" className="relative inline-block text-lg group ">
+            <a
+              href="/login"
+              className="relative md:inline-block hidden text-lg group "
+            >
               <span className="relative z-10 block px-4 py-2 sm:px-5 sm:py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                 <span className="absolute inset-0 w-full h-full px-4 py-2 sm:px-5 sm:py-3 rounded-lg bg-gray-50"></span>
                 <span className="absolute left-0 w-40 sm:w-48 h-40 sm:h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
@@ -253,16 +247,6 @@ function Navbar({ isAuth, setIsAuth }) {
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </a>
             </li>
-            <li>
-              <a
-                href="/compiler"
-                className="text-lg text-gray-800 group transition duration-300"
-              >
-                Compiler
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
-              </a>
-            </li>
-            
             <li>
               <a
                 href="/review"
