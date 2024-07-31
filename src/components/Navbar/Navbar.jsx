@@ -260,7 +260,13 @@ function Navbar({ isAuth, setIsAuth }) {
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden bg-slate-100 border-t-2 border-gray-200">
+        <nav
+          className={`md:hidden bg-slate-100 border-t-2 overflow-hidden border-gray-200${
+            isScrolled
+              ? "bg-slate-100 bg-opacity-20 rounded-b-[16px] border-x-[1px] border-b-[1px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5.5px] border-white border-opacity-32"
+              : "bg-slate-100 border-[#000]"
+          }`}
+        >
           <ul className="flex flex-col space-y-4 p-4">
             <li>
               <a
