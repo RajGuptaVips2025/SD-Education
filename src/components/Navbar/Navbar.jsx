@@ -273,7 +273,7 @@ function Navbar({ isAuth, setIsAuth }) {
             </li>
             <li>
               <a
-                href="/"
+                href="/compiler"
                 className="text-lg text-gray-800 group transition duration-300"
               >
                 compiler
